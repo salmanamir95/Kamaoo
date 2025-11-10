@@ -1,0 +1,70 @@
+{
+  "products": {
+    "1": {
+      "id": 1,
+      "image": "assets/images/product1.png",
+      "name": "The Basic Tee",
+      "quantity": 0,
+      "price": 25.99,
+      "rating": 4.5,
+      "reviews": 3,
+      "size": "M",
+      "isFavorite": false
+    },
+    "2": {
+      "id": 2,
+      "image": "assets/images/product2.png",
+      "name": "The Statement Skirt",
+      "quantity": 0,
+      "price": 79.99,
+      "rating": 4.4,
+      "reviews": 5,
+      "size": "M",
+      "isFavorite": false
+    },
+    "3": {
+      "id": 3,
+      "image": "assets/images/product3.png",
+      "name": "The Luxe Sweater",
+      "quantity": 0,
+      "price": 129.99,
+      "rating": 4.3,
+      "reviews": 2,
+      "size": "M",
+      "isFavorite": false
+    },
+    "4": {
+      "id": 4,
+      "image": "assets/images/product4.png",
+      "name": "The Statement Top",
+      "quantity": 0,
+      "price": 59.99,
+      "rating": 4.2,
+      "reviews": 4,
+      "size": "M",
+      "isFavorite": false
+    },
+    "5": {
+      "id": 5,
+      "image": "assets/images/product5.png",
+      "name": "The Casual Tank",
+      "quantity": 0,
+      "price": 39.99,
+      "rating": 4.1,
+      "reviews": 3,
+      "size": "M",
+      "isFavorite": false
+    },
+    "6": {
+      "id": 6,
+      "image": "assets/images/product1.png",
+      "name": "The Denim Jean",
+      "quantity": 0,
+      "price": 59.99,
+      "rating": 4,
+      "reviews": 3,
+      "size": "M",
+      "isFavorite": false
+    }
+  }
+}

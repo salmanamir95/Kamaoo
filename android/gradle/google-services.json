@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "813830541781",
+    "firebase_url": "https://kamao-db-6bf19-default-rtdb.firebaseio.com",
+    "project_id": "kamao-db-6bf19",
+    "storage_bucket": "kamao-db-6bf19.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813830541781:android:d86d2bb62f60963e7cad5c",
+        "android_client_info": {
+          "package_name": "com.aasharef.ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXFWDU0xuc_dPBHAJEbzd5tjJtIiDIAGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813830541781:android:a8a21281d59135c47cad5c",
+        "android_client_info": {
+          "package_name": "com.aasharef.ecommerce_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXFWDU0xuc_dPBHAJEbzd5tjJtIiDIAGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
