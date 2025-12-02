@@ -7,6 +7,7 @@ import 'package:ecommerce_app/app/domain/services/order_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 
 import 'app/data/local/my_shared_pref.dart';
@@ -18,6 +19,10 @@ import 'firebase_options.dart';
 Future<void> main() async {
   // wait for bindings
   WidgetsFlutterBinding.ensureInitialized();
+
+  // load environment variables from .env file
+  await dotenv.load(fileName: ".env");
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

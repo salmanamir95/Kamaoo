@@ -83,7 +83,7 @@ class ProductItem extends StatelessWidget {
                   ),
               isCompact ? const SizedBox(height: 4) : 5.verticalSpace,
               Text(
-                '\Rs${product.price}',
+                'Rs${product.price}',
                 style: isCompact
                     ? theme.textTheme.bodyLarge
                     : theme.textTheme.displaySmall,
