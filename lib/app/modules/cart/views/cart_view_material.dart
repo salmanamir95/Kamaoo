@@ -77,7 +77,7 @@ class CartViewMaterial extends GetView<CartController> {
                             )),
                         10.verticalSpace,
                         Text(
-                          '\$${controller.total.toStringAsFixed(2)}',
+                          '\Rs${controller.total.toStringAsFixed(2)}',
                           style: theme.textTheme.displayLarge?.copyWith(
                             decoration: TextDecoration.underline,
                             decorationColor:

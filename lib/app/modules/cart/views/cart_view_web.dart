@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 
@@ -42,13 +41,13 @@ class CartViewWeb extends GetView<CartController> {
               Text('Order Summary', style: theme.textTheme.titleLarge),
               SizedBox(height: gap),
               buildSummaryRow(
-                  'Subtotal', '\$${controller.total.toStringAsFixed(2)}'),
+                  'Subtotal', '\Rs${controller.total.toStringAsFixed(2)}'),
               SizedBox(height: gap / 2),
               buildSummaryRow('Shipping', 'FREE',
                   valueColor: theme.primaryColor),
               const Divider(height: 24),
               buildSummaryRow(
-                  'Total', '\$${controller.total.toStringAsFixed(2)}'),
+                  'Total', '\Rs${controller.total.toStringAsFixed(2)}'),
               SizedBox(height: gap * 1.5),
               CustomButton(
                 text: 'Proceed to Checkout',

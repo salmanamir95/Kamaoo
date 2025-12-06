@@ -57,7 +57,7 @@ class CartViewCupertino extends GetView<CartController> {
                         children: [
                           Text('Total:', style: theme.textTheme.bodyLarge),
                           Text(
-                            '\$${controller.total.toStringAsFixed(2)}',
+                            '\Rs${controller.total.toStringAsFixed(2)}',
                             style: theme.textTheme.displayLarge,
                           ),
                         ],

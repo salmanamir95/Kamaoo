@@ -7,7 +7,6 @@ import 'package:ecommerce_app/app/domain/services/order_service.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 
 import 'app/data/local/my_shared_pref.dart';
@@ -21,7 +20,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // load environment variables from .env file
-  await dotenv.load(fileName: ".env");
+  //await dotenv.load(fileName: ".env");
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -33,57 +32,47 @@ Future<void> main() async {
   await initServices();
 
   runApp(
-    // We need to initialize services before running the app
-    ScreenUtilInit(
-      designSize: const Size(375, 812),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      // The builder here should return your root app widget.
+    GetMaterialApp(
+      title: "Kamaoo",
+      debugShowCheckedModeBanner: false,
+      theme: MyTheme.getThemeData(isLight: true),
+      darkTheme: MyTheme.getThemeData(isLight: false),
+      themeMode:
+          MySharedPref.getThemeIsLight() ? ThemeMode.light : ThemeMode.dark,
+      initialRoute: AppPages.INITIAL, // first screen to show
+      getPages: AppPages.routes, // app screens
+      // Use the builder to wrap your pages with ScreenUtilInit
       builder: (context, child) {
-        return GetMaterialApp(
-          title: "Kamaoo",
-          debugShowCheckedModeBanner: false,
-          theme: MyTheme.getThemeData(isLight: true),
-          darkTheme: MyTheme.getThemeData(isLight: false),
-          themeMode:
-              MySharedPref.getThemeIsLight() ? ThemeMode.light : ThemeMode.dark,
-          initialRoute: AppPages.INITIAL, // first screen to show
-          getPages: AppPages.routes, // app screens
+        return ScreenUtilInit(
+          designSize: const Size(375, 812),
+          minTextAdapt: true,
+          splitScreenMode: true,
+          child: child,
         );
       },
-    ),
+    ), // GetMaterialApp
   );
 }
 
 Future<void> initServices() async {
-  // This will initialize Firebase in the background
-  // and all essential services before the app runs.
-  await Get.putAsync(() => InitializationService().init(), permanent: true);
-}
+  print('[INFO] Initializing services...');
+  try {
+    // 1. Initialize and register AuthService. It's crucial to have it ready first.
+    await Get.putAsync(() => AuthService().init(), permanent: true);
+    print('[INFO] AuthService initialized.');
 
-class InitializationService extends GetxService {
-  Future<InitializationService> init() async {
-    try {
-      print('[INFO] InitializationService: init() started');
+    // 2. Eagerly initialize services that need to listen to auth state changes immediately.
+    Get.put(CartService(), permanent: true);
+    Get.put(FavoritesService(), permanent: true);
+    print('[INFO] CartService and FavoritesService registered.');
 
-      // 1. Create and initialize AuthService instance directly.
-      final authService = await AuthService().init();
-      // 2. Register the already-initialized instance with GetX.
-      Get.put(authService, permanent: true);
-      print('[INFO] AuthService initialized');
+    // 3. Lazily initialize other services that are not needed immediately at startup.
+    Get.lazyPut(() => ProductService(), fenix: true);
+    Get.lazyPut(() => OrderService(), fenix: true);
+    print('[INFO] ProductService and OrderService registered lazily.');
 
-      // 3. Eagerly initialize Cart and Favorites services to listen for auth changes.
-      Get.put(CartService(), permanent: true);
-      Get.put(FavoritesService(), permanent: true);
-
-      // 4. Lazy load other services.
-      Get.lazyPut(() => ProductService());
-      Get.lazyPut(() => OrderService());
-
-      print('[INFO] InitializationService completed successfully');
-    } catch (e, st) {
-      print('[ERROR] Service initialization failed: $e\n$st');
-    }
-    return this;
+    print('[INFO] All services initialized successfully.');
+  } catch (e, st) {
+    print('[ERROR] Service initialization failed: $e\n$st');
   }
 }
