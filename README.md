@@ -8,7 +8,7 @@ Kamaoo is a feature-rich, cross-platform e-commerce application built with Flutt
 
 <table align="center">
   <tr>
-    <td align="center"><strong>Mobile (Android/iOS)</strong></td>
+    <td align="center"><strong>Mobile (Android)</strong></td>
     <td align="center"><strong>Web Browser</strong></td>
   </tr>
   <tr>

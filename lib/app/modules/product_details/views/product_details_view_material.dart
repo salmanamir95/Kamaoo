@@ -101,7 +101,7 @@ class ProductDetailsViewMaterial extends GetView<ProductDetailsController> {
                 child: Row(
                   children: [
                     Text(
-                      '\$${controller.product.price}',
+                      '\Rs${controller.product.price}',
                       style: theme.textTheme.displayLarge?.copyWith(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.bold,

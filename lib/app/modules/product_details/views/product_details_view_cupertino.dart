@@ -61,7 +61,7 @@ class ProductDetailsViewCupertino extends GetView<ProductDetailsController> {
                                 ?.copyWith(fontSize: 20.sp),
                           ),
                           Text(
-                            '\$${controller.product.price}',
+                            '\Rs${controller.product.price}',
                             style: theme.textTheme.displayMedium
                                 ?.copyWith(fontSize: 20.sp),
                           ),

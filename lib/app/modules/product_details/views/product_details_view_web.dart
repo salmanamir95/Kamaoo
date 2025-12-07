@@ -103,7 +103,7 @@ class ProductDetailsViewWeb extends GetView<ProductDetailsController> {
               SizedBox(height: gap / 2), // Slightly reduce spacing
               buildRating(),
               SizedBox(height: gap * 1.5),
-              Text('\$${controller.product.price}',
+              Text('\Rs${controller.product.price}',
                   style: theme.textTheme.displayLarge
                       ?.copyWith(color: theme.primaryColor)),
               SizedBox(height: gap * 1.5),
