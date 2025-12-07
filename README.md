@@ -4,7 +4,9 @@ Kamaoo is a feature-rich, cross-platform e-commerce application built with Flutt
 
 ## 📸 Screenshots
 
-Here's a gallery of the Kamaoo app in action, showcasing both light and dark themes across different features.
+### Web Application
+
+Here's a gallery of the Kamaoo web app in action, showcasing both light and dark themes across different features.
 
 <table align="center">
   <tr>
@@ -18,14 +20,24 @@ Here's a gallery of the Kamaoo app in action, showcasing both light and dark the
     <td><img src="Images/WebAppImages/SignUp%20White%20bg.png" alt="Sign Up Page Light" width="270"/></td>
   </tr>
   <tr>
+    <td align="center">Sign Up Page (Dark)</td>
     <td align="center">Product List (Dark)</td>
     <td align="center">Product List (Light)</td>
-    <td align="center">Product Detail (Light)</td>
   </tr>
   <tr>
+    <td><img src="Images/WebAppImages/Signup%20Black%20bg%20.png" alt="Sign Up Page Dark" width="270"/></td>
     <td><img src="Images/WebAppImages/Product%20list%20black%20bg.png" alt="Product List Dark" width="270"/></td>
     <td><img src="Images/WebAppImages/base_productlist%20page%20white%20bg.png" alt="Product List Light" width="270"/></td>
+  </tr>
+  <tr>
+    <td align="center">Product Detail (Dark)</td>
+    <td align="center">Product Detail (Light)</td>
+    <td align="center">Favorites (Dark)</td>
+  </tr>
+  <tr>
+    <td><img src="Images/WebAppImages/product%20details%20black%20bg.png" alt="Product Detail Dark" width="270"/></td>
     <td><img src="Images/WebAppImages/product%20detail%20page%20white%20bg.png" alt="Product Detail Light" width="270"/></td>
+    <td><img src="Images/WebAppImages/Favorites%20page%20black%20bg.png" alt="Favorites Dark" width="270"/></td>
   </tr>
   <tr>
     <td align="center">Favorites (Light)</td>
