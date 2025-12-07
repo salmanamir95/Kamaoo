@@ -4,16 +4,38 @@ Kamaoo is a feature-rich, cross-platform e-commerce application built with Flutt
 
 ## 📸 Screenshots
 
-*(Add your screenshots and GIFs here to showcase the app)*
+Here's a gallery of the Kamaoo app in action, showcasing both light and dark themes across different features.
 
 <table align="center">
   <tr>
-    <td align="center"><strong>Mobile (Android)</strong></td>
-    <td align="center"><strong>Web Browser</strong></td>
+    <td align="center">Welcome Page (Dark)</td>
+    <td align="center">Login Page (Light)</td>
+    <td align="center">Sign Up Page (Light)</td>
   </tr>
   <tr>
-    <td><img src="" alt="Mobile Screenshot" width="300"/></td>
-    <td><img src="" alt="Web Screenshot" width="500"/></td>
+    <td><img src="Images/WebAppImages/Welcome%20page%20black%20bg.png" alt="Welcome Page Dark" width="270"/></td>
+    <td><img src="Images/WebAppImages/Login%20Page%20White%20bg.png" alt="Login Page Light" width="270"/></td>
+    <td><img src="Images/WebAppImages/SignUp%20White%20bg.png" alt="Sign Up Page Light" width="270"/></td>
+  </tr>
+  <tr>
+    <td align="center">Product List (Dark)</td>
+    <td align="center">Product List (Light)</td>
+    <td align="center">Product Detail (Light)</td>
+  </tr>
+  <tr>
+    <td><img src="Images/WebAppImages/Product%20list%20black%20bg.png" alt="Product List Dark" width="270"/></td>
+    <td><img src="Images/WebAppImages/base_productlist%20page%20white%20bg.png" alt="Product List Light" width="270"/></td>
+    <td><img src="Images/WebAppImages/product%20detail%20page%20white%20bg.png" alt="Product Detail Light" width="270"/></td>
+  </tr>
+  <tr>
+    <td align="center">Favorites (Light)</td>
+    <td align="center">Cart & Order (Light)</td>
+    <td align="center">Settings (Dark)</td>
+  </tr>
+  <tr>
+    <td><img src="Images/WebAppImages/Favorites%20White%20bg.png" alt="Favorites Light" width="270"/></td>
+    <td><img src="Images/WebAppImages/Add%20to%20Cart%20and%20Order%20White%20bg.png" alt="Cart & Order Light" width="270"/></td>
+    <td><img src="Images/WebAppImages/Settings%20black%20bg.png" alt="Settings Dark" width="270"/></td>
   </tr>
 </table>
 
